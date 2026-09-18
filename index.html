@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Ángel Barrios Bejarano | Punto de Partida — Psicología Infanto-Juvenil & Familia</title>
+  <meta name="description" content="Portal oficial del Dr. Ángel Barrios Bejarano. Director de Adolescentes sin Estrés, conferencista, autor de 'Familia: Especie en Extinción' y columnista de 'Punto de Partida'. Más de 30 años al servicio de la familia." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://api.iconify.design/lucide:brain.svg?color=%230284c7" type="image/svg+xml" />
+
+  <!-- Google Fonts & Tailwind CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            },
+            accent: {
+              gold: '#d97706',
+              amber: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    .hero-gradient {
+      background: radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.08) 0%, rgba(255, 255, 255, 0) 60%),
+                  radial-gradient(circle at 90% 80%, rgba(217, 119, 6, 0.06) 0%, rgba(255, 255, 255, 0) 50%);
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.07), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Top Announcement Bar (Credenciales & Redes) -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+      <div class="flex items-center gap-2">
+        <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Centro de Diagnóstico <strong>Adolescentes sin Estrés</strong> • Más de 30 años al servicio de la familia</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/adolescentessinestres" target="_blank" class="hover:text-amber-400 transition flex items-center gap-1.5 font-medium">
+          <i data-lucide="instagram" class="w-3.5 h-3.5 text-pink-400"></i>
+          <span>@adolescentessinestres</span>
+          <span class="bg-slate-800 px-1.5 py-0.5 rounded text-[10px] text-amber-300 font-bold">11.4k</span>
+        </a>
+        <span class="text-slate-700 hidden sm:inline">|</span>
+        <a href="https://www.instagram.com/angelbarriosbejarano" target="_blank" class="hover:text-amber-400 transition hidden sm:flex items-center gap-1">
+          <i data-lucide="user" class="w-3.5 h-3.5 text-sky-400"></i>
+          <span>@angelbarriosbejarano</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo / Marca -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-700 text-white flex items-center justify-center font-serif text-xl font-bold shadow-md shadow-sky-600/20 group-hover:scale-105 transition">
+          AB
+        </div>
+        <div>
+          <span class="block font-serif text-xl font-bold tracking-tight text-slate-900 leading-none">Dr. Ángel Barrios</span>
+          <span class="block text-[11px] uppercase tracking-widest text-sky-600 font-bold mt-1">Punto de Partida</span>
+        </div>
+      </a>
+
+      <!-- Menu Items Desktop -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#inicio" class="text-sky-600 hover:text-sky-700 transition">Inicio</a>
+        <a href="#sobre-mi" class="hover:text-sky-600 transition">Trayectoria</a>
+        <a href="#centro" class="hover:text-sky-600 transition">Adolescentes sin Estrés</a>
+        <a href="#columna" class="hover:text-sky-600 transition">Columna Semanal</a>
+        <a href="#libros" class="hover:text-sky-600 transition">Libros</a>
+        <a href="#contacto" class="hover:text-sky-600 transition">Contacto</a>
+      </nav>
+
+      <!-- CTA Contacto -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://ig.me/m/adolescentessinestres" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-600 to-sky-700 hover:from-sky-700 hover:to-sky-800 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-lg shadow-sky-600/25 transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Agendar Consulta</span>
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="mobile-toggle" class="md:hidden p-2 text-slate-600 hover:text-slate-900" aria-label="Abrir menú">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
+      <a href="#inicio" class="block font-medium text-slate-700 py-1">Inicio</a>
+      <a href="#sobre-mi" class="block font-medium text-slate-700 py-1">Trayectoria</a>
+      <a href="#centro" class="block font-medium text-slate-700 py-1">Adolescentes sin Estrés</a>
+      <a href="#columna" class="block font-medium text-slate-700 py-1">Columna Semanal</a>
+      <a href="#libros" class="block font-medium text-slate-700 py-1">Libros & Obras</a>
+      <a href="#contacto" class="block font-medium text-slate-700 py-1">Contacto</a>
+      <a href="https://ig.me/m/adolescentessinestres" target="_blank" class="w-full text-center mt-2 flex items-center justify-center gap-2 bg-sky-600 text-white font-semibold py-2.5 rounded-xl">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>Contactar por Instagram</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="relative overflow-hidden hero-gradient pt-12 pb-20 lg:pt-20 lg:pb-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-bold tracking-wide uppercase">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-sky-600"></i>
+            <span>Psicología Infanto-Juvenil & Orientación Familiar</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.15]">
+            "No existe punto de partida si no se sabe <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-indigo-600">a dónde ir</span>."
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 font-normal leading-relaxed">
+            Portal oficial del <strong>Dr. Ángel Barrios Bejarano</strong>. Orientación terapéutica personalizada, formación para padres, educación emocional y resiliencia para transformar el presente y el futuro de nuestros jóvenes.
+          </p>
+
+          <!-- Social Proof / Metricas -->
+          <div class="grid grid-cols-3 gap-4 py-4 border-y border-slate-200/80">
+            <div>
+              <span class="block text-2xl sm:text-3xl font-bold text-slate-900">+30</span>
+              <span class="text-xs text-slate-500 font-medium">Años de Trayectoria</span>
+            </div>
+            <div>
+              <span class="block text-2xl sm:text-3xl font-bold text-slate-900">11.4k+</span>
+              <span class="text-xs text-slate-500 font-medium">Seguidores Instagram</span>
+            </div>
+            <div>
+              <span class="block text-2xl sm:text-3xl font-bold text-slate-900">15+</span>
+              <span class="text-xs text-slate-500 font-medium">Años en Diario Frontera</span>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="https://ig.me/m/adolescentessinestres" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg transition">
+              <i data-lucide="calendar" class="w-4 h-4 text-sky-400"></i>
+              <span>Solicitar Orientación Terapéutica</span>
+            </a>
+            <a href="#columna" class="inline-flex items-center gap-2 bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 font-semibold px-7 py-3.5 rounded-xl transition">
+              <i data-lucide="book-open" class="w-4 h-4 text-slate-500"></i>
+              <span>Leer Artículos y Ensayos</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Card & Visual -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md bg-white rounded-3xl p-6 shadow-2xl border border-slate-100">
+            <!-- Decorative Badge -->
+            <div class="absolute -top-3 -right-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+              <i data-lucide="award" class="w-3.5 h-3.5"></i> Vendedor de Esperanza
+            </div>
+
+            <!-- Profile Image Container -->
+            <div class="relative aspect-square w-full rounded-2xl overflow-hidden mb-6 bg-slate-100 shadow-inner">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" 
+                   alt="Dr. Ángel Barrios Bejarano en consulta" 
+                   class="object-cover w-full h-full" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent flex items-end p-6">
+                <div class="text-white">
+                  <p class="font-serif text-2xl font-bold">Dr. Ángel Barrios Bejarano</p>
+                  <p class="text-xs text-sky-300 mt-0.5">Psicólogo Clínico Infanto-Juvenil • Coach Internacional</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Center Info Snippet -->
+            <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-100 text-xs text-slate-600">
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="building-2" class="w-4 h-4 text-sky-600 shrink-0"></i>
+                <span>Director: <strong>Centro Adolescentes sin Estrés C.A.</strong></span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="feather" class="w-4 h-4 text-sky-600 shrink-0"></i>
+                <span>Autor: <em>Familia, Especie en Extinción (Tomos I y II)</em></span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-sky-600 shrink-0"></i>
+                <span>Sedes en Mérida y Zulia • Consultas Online para el exterior</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Banner (Inspiración Saint-Exupéry / El Principito) -->
+  <section class="bg-gradient-to-r from-slate-900 via-sky-950 to-slate-900 text-white py-12 px-4 border-y border-slate-800">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <i data-lucide="quote" class="w-8 h-8 text-amber-400 mx-auto opacity-80"></i>
+      <blockquote class="font-serif italic text-xl sm:text-2xl text-slate-200">
+        "Para su principito, única en el mundo. Así es cada hijo, cada joven y cada familia que llega a nuestras manos: un universo irrepetible que merece ser escuchado con amor, paciencia y ciencia."
+      </blockquote>
+      <p class="text-xs uppercase tracking-widest text-sky-400 font-semibold">— Dr. Ángel Barrios • Filosofía Punto de Partida</p>
+    </div>
+  </section>
+
+  <!-- Trayectoria & Filosofía -->
+  <section id="sobre-mi" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Perfil Profesional</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Más de Tres Décadas al Servicio del Desarrollo Humano</h2>
+        <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Tarjeta 1 -->
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/70 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-6">
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Clínica Infanto-Juvenil</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Evaluación, diagnóstico y terapia para adolescentes y familias que transitan por ansiedad, cambios conductuales, adicciones o crisis comunicacionales. Un enfoque empático, basado en evidencia y calidez humana.
+          </p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/70 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center mb-6">
+            <i data-lucide="newspaper" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Punto de Partida</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Espacio editorial dominical publicado de manera ininterrumpida desde diciembre de 2009 en el Diario Frontera. Cientos de reflexiones leídas por miles de familias en Venezuela y América Latina.
+          </p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/70 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-6">
+            <i data-lucide="mic" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Conferencias & Coaching</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Charlas formativas en colegios, universidades y empresas sobre resolución de conflictos familiares, prevención del consumo de drogas ("Adolescencia en Positivo") y educación emocional.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyecto Insignia: Adolescentes sin Estrés -->
+  <section id="centro" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/20 text-sky-400 text-xs font-semibold">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            <span>Centro de Diagnóstico Especializado</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-white">
+            Centro "Adolescentes sin Estrés"
+          </h2>
+
+          <p class="text-slate-300 text-base leading-relaxed">
+            Fundado y liderado por el Dr. Ángel Barrios Bejarano, <strong>Adolescentes sin Estrés</strong> es un espacio creado específicamente para dar respuesta a los desafíos psicosociales que enfrentan los jóvenes hoy en día.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              </div>
+              <div>
+                <strong class="text-white text-sm">Evaluación y Diagnóstico Temprano:</strong>
+                <p class="text-slate-400 text-xs mt-0.5">Detección a tiempo de trastornos de ánimo, estrés académico, hiperactividad y dificultades de adaptación.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              </div>
+              <div>
+                <strong class="text-white text-sm">Programa "Adolescencia en Positivo":</strong>
+                <p class="text-slate-400 text-xs mt-0.5">Estrategia pionera de prevención de conductas de riesgo y sustancias nocivas con impacto comprobado.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              </div>
+              <div>
+                <strong class="text-white text-sm">Escuela y Mediación para Padres:</strong>
+                <p class="text-slate-400 text-xs mt-0.5">Acompañamiento a madres y padres para restablecer puentes de diálogo que parecían rotos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="https://www.instagram.com/adolescentessinestres" target="_blank" class="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-6 py-3 rounded-xl transition">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+              <span>Visitar @adolescentessinestres</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual / Social Counter Card -->
+        <div class="bg-slate-800/80 rounded-3xl p-8 border border-slate-700 backdrop-blur-sm space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-700 pb-4">
+            <div>
+              <p class="text-xs text-slate-400 font-semibold uppercase">Presencia en Medios</p>
+              <h3 class="text-lg font-bold text-white">Comunidad Activa</h3>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold">En Vivo</span>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-700/50 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 to-rose-500 flex items-center justify-center text-white">
+                  <i data-lucide="instagram" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-sm text-white">@adolescentessinestres</p>
+                  <p class="text-xs text-slate-400">Consejos diarios, reels y reflexiones en video</p>
+                </div>
+              </div>
+              <span class="text-sky-400 font-bold text-sm">11.4k</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-700/50 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-sky-600 flex items-center justify-center text-white">
+                  <i data-lucide="radio" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-sm text-white">Carrusel de la Fama</p>
+                  <p class="text-xs text-slate-400">Participación semanal en Éxitos 100.9 FM</p>
+                </div>
+              </div>
+              <span class="text-amber-400 font-bold text-xs uppercase">Radio</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-700/50 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white">
+                  <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-sm text-white">Proyecto "Salto Aponwao"</p>
+                  <p class="text-xs text-slate-400">Propuesta de educación personalizada en el Zulia</p>
+                </div>
+              </div>
+              <span class="text-emerald-400 font-bold text-xs uppercase">Educación</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Artículos y Columna Punto de Partida -->
+  <section id="columna" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Archivo Editorial</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-1">Columna "Punto de Partida"</h2>
+          <p class="text-slate-600 text-sm mt-2 max-w-xl">Artículos publicados en Diario Frontera sobre crianza, psicología de la adolescencia y crisis de la sociedad contemporánea.</p>
+        </div>
+        <a href="https://fronteradigital.com.ve" target="_blank" class="inline-flex items-center gap-1.5 text-sky-600 hover:text-sky-700 font-semibold text-sm">
+          <span>Ver columna en Frontera Digital</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Articulo 1 -->
+        <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 card-hover flex flex-col">
+          <div class="h-48 bg-sky-900 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="Jóvenes compartiendo" class="w-full h-full object-cover opacity-80" />
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
+              Adolescencia
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-xs text-slate-400 font-medium">Diario Frontera • Punto de Partida</span>
+              <h3 class="font-serif text-lg font-bold text-slate-900 mt-1 hover:text-sky-600 transition">
+                ¿Por qué los jóvenes de hoy se aíslan en la era hiperconectada?
+              </h3>
+              <p class="text-slate-600 text-xs mt-2 line-clamp-3 leading-relaxed">
+                El exceso de pantallas versus la falta de escucha atenta en el hogar. Cómo abrir canales de diálogo reales cuando el adolescente se encierra en su habitación.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-sky-600">
+              <span>Leer artículo completo</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </article>
+
+        <!-- Articulo 2 -->
+        <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 card-hover flex flex-col">
+          <div class="h-48 bg-indigo-900 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" alt="Familia unida" class="w-full h-full object-cover opacity-80" />
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
+              Familia
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-xs text-slate-400 font-medium">Diario Frontera • Punto de Partida</span>
+              <h3 class="font-serif text-lg font-bold text-slate-900 mt-1 hover:text-sky-600 transition">
+                Familia: Especie en Extinción, ¿mito o realidad urgente?
+              </h3>
+              <p class="text-slate-600 text-xs mt-2 line-clamp-3 leading-relaxed">
+                El ritmo frenético del siglo XXI ha desarticulado la mesa familiar. Rescatar el valor del encuentro como primer santuario protector de nuestros hijos.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-sky-600">
+              <span>Leer artículo completo</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </article>
+
+        <!-- Articulo 3 -->
+        <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 card-hover flex flex-col">
+          <div class="h-48 bg-amber-900 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Educación y esperanza" class="w-full h-full object-cover opacity-80" />
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
+              Inteligencia Emocional
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-xs text-slate-400 font-medium">Diario Frontera • Punto de Partida</span>
+              <h3 class="font-serif text-lg font-bold text-slate-900 mt-1 hover:text-sky-600 transition">
+                Vender esperanza cuando el entorno parece desmoronarse
+              </h3>
+              <p class="text-slate-600 text-xs mt-2 line-clamp-3 leading-relaxed">
+                Cómo inculcar resiliencia, metas claras y un proyecto de vida sólido en los jóvenes en tiempos de incertidumbre social y migratoria.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-sky-600">
+              <span>Leer artículo completo</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Libros y Publicaciones -->
+  <section id="libros" class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-sky-900 via-indigo-950 to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+        
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-6">
+            <span class="px-3.5 py-1.5 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
+              Obras Publicadas
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold">
+              "Familia, Especie en Extinción" (Tomos I y II)
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Una obra cumbre del Dr. Ángel Barrios Bejarano nacida de años de consulta terapéutica y contacto directo con miles de familias. Un manual imprescindible para padres, docentes y orientadores que buscan respuestas profundas y prácticas.
+            </p>
+
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a href="https://ig.me/m/adolescentessinestres" target="_blank" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl transition">
+                <i data-lucide="book" class="w-4 h-4"></i>
+                <span>Consultar Disponibilidad de Ejemplares</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 flex justify-center">
+            <div class="w-56 h-80 rounded-2xl bg-gradient-to-tr from-amber-600 to-amber-400 shadow-2xl p-6 flex flex-col justify-between border-4 border-amber-300/30 transform rotate-2 hover:rotate-0 transition">
+              <div class="border-b border-amber-200/40 pb-4">
+                <span class="text-[10px] tracking-widest uppercase font-bold text-amber-950">Dr. Ángel Barrios</span>
+                <h4 class="font-serif font-bold text-xl text-slate-950 leading-tight mt-1">FAMILIA</h4>
+                <p class="text-xs font-serif italic text-amber-950">Especie en Extinción</p>
+              </div>
+              <div class="text-center py-4">
+                <i data-lucide="sparkles" class="w-8 h-8 text-amber-950 mx-auto opacity-70"></i>
+              </div>
+              <div class="text-[10px] text-amber-950 font-semibold border-t border-amber-200/40 pt-2 text-center">
+                Punto de Partida Ediciones
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto & Solicitud de Consulta -->
+  <section id="contacto" class="py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-lg border border-slate-200 text-center space-y-6">
+        
+        <div class="w-16 h-16 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mx-auto shadow-inner">
+          <i data-lucide="send" class="w-8 h-8"></i>
+        </div>
+
+        <h2 class="font-serif text-3xl font-bold text-slate-900">
+          Iniciemos el Camino Juntos
+        </h2>
+
+        <p class="text-slate-600 text-base max-w-xl mx-auto leading-relaxed">
+          Ya sea para una consulta individual para tu hijo/a, orientación familiar, conferencias o talleres en tu institución educativa, el Dr. Ángel Barrios Bejarano y su equipo están a tu disposición.
+        </p>
+
+        <!-- Canales Directos -->
+        <div class="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto pt-4 text-left">
+          
+          <a href="https://ig.me/m/adolescentessinestres" target="_blank" class="p-4 rounded-xl border border-slate-200 hover:border-sky-500 bg-slate-50 hover:bg-sky-50 transition group flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="block text-xs text-slate-500">Instagram Direct</span>
+              <strong class="text-sm text-slate-900">@adolescentessinestres</strong>
+            </div>
+          </a>
+
+          <a href="https://ig.me/m/angelbarriosbejarano" target="_blank" class="p-4 rounded-xl border border-slate-200 hover:border-sky-500 bg-slate-50 hover:bg-sky-50 transition group flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
+              <i data-lucide="user-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="block text-xs text-slate-500">Perfil Personal</span>
+              <strong class="text-sm text-slate-900">@angelbarriosbejarano</strong>
+            </div>
+          </a>
+
+        </div>
+
+        <p class="text-xs text-slate-400 pt-4">
+          Atención presencial en Mérida y Zulia • Consultas Online internacionales vía Zoom / Google Meet.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-sky-600 text-white flex items-center justify-center font-serif font-bold text-base">
+          AB
+        </div>
+        <div>
+          <p class="text-white font-bold text-sm">Dr. Ángel Barrios Bejarano</p>
+          <p class="text-xs text-slate-500">Punto de Partida • Adolescentes sin Estrés</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 text-xs text-slate-400">
+        <a href="#inicio" class="hover:text-white transition">Inicio</a>
+        <a href="#sobre-mi" class="hover:text-white transition">Trayectoria</a>
+        <a href="#centro" class="hover:text-white transition">Adolescentes sin Estrés</a>
+        <a href="#columna" class="hover:text-white transition">Columna</a>
+        <a href="#libros" class="hover:text-white transition">Libros</a>
+      </div>
+
+      <div class="text-xs text-slate-500">
+        &copy; 2026 Dr. Ángel Barrios Bejarano. Todos los derechos reservados.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Lucide icons initialize script -->
+  <script>
+    lucide.createIcons();
+
+    // Mobile toggle
+    const toggleBtn = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
